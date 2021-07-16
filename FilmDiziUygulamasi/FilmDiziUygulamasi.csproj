@@ -1,0 +1,403 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{06DF6C3C-0FDC-40D7-A583-0BE50E194D9F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FilmDiziUygulamasi</RootNamespace>
+    <AssemblyName>FilmDiziUygulamasi</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\css\demo.css" />
+    <Content Include="Content\css\plugins.css" />
+    <Content Include="Content\css\plugins\bootstrap-datepicker\datepicker3.css" />
+    <Content Include="Content\css\plugins\bootstrap-multiselect\bootstrap-multiselect.css" />
+    <Content Include="Content\css\plugins\bootstrap-social\bootstrap-social.css" />
+    <Content Include="Content\css\plugins\bootstrap-timepicker\bootstrap-timepicker.css" />
+    <Content Include="Content\css\plugins\bootstrap-timepicker\bootstrap-timepicker.min.css" />
+    <Content Include="Content\css\plugins\bootstrap-tokenfield\bootstrap-tokenfield.css" />
+    <Content Include="Content\css\plugins\bootstrap-tokenfield\tokenfield-typeahead.css" />
+    <Content Include="Content\css\plugins\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\css\plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\css\plugins\datatables\datatables.css" />
+    <Content Include="Content\css\plugins\daterangepicker\daterangepicker-bs3.css" />
+    <Content Include="Content\css\plugins\dropzone\css\dropzone.css" />
+    <Content Include="Content\css\plugins\dropzone\images\spritemap%402x.png" />
+    <Content Include="Content\css\plugins\dropzone\images\spritemap.png" />
+    <Content Include="Content\css\plugins\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\css\plugins\fullcalendar\fullcalendar.css" />
+    <Content Include="Content\css\plugins\jvectormap\jquery-jvectormap-1.1.1.css" />
+    <Content Include="Content\css\plugins\jvectormap\jquery-jvectormap-1.2.2.css" />
+    <Content Include="Content\css\plugins\ladda\ladda-themeless.css" />
+    <Content Include="Content\css\plugins\ladda\ladda-themeless.min.css" />
+    <Content Include="Content\css\plugins\ladda\ladda.css" />
+    <Content Include="Content\css\plugins\ladda\ladda.min.css" />
+    <Content Include="Content\css\plugins\messenger\messenger-spinner.css" />
+    <Content Include="Content\css\plugins\messenger\messenger-theme-flat.css" />
+    <Content Include="Content\css\plugins\messenger\messenger.css" />
+    <Content Include="Content\css\plugins\morris\morris.css" />
+    <Content Include="Content\css\plugins\pace\pace.css" />
+    <Content Include="Content\css\plugins\summernote\summernote-bs3.css" />
+    <Content Include="Content\css\plugins\summernote\summernote.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\icons\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\icons\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\icons\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\img\checkmark.png" />
+    <Content Include="Content\img\datatables\sort_asc.png" />
+    <Content Include="Content\img\datatables\sort_asc_disabled.png" />
+    <Content Include="Content\img\datatables\sort_both.png" />
+    <Content Include="Content\img\datatables\sort_desc.png" />
+    <Content Include="Content\img\datatables\sort_desc_disabled.png" />
+    <Content Include="Content\img\flex-admin-logo%401x.png" />
+    <Content Include="Content\img\flex-admin-logo%402x.png" />
+    <Content Include="Content\img\flex-admin-logo.png" />
+    <Content Include="Content\img\profil.jpg" />
+    <Content Include="Content\img\profile-full.jpg" />
+    <Content Include="Content\img\profile-pic-small.jpg" />
+    <Content Include="Content\img\profile-pic.jpg" />
+    <Content Include="Content\img\uniform\bg-input-focus.png" />
+    <Content Include="Content\img\uniform\bg-input.png" />
+    <Content Include="Content\img\uniform\sprite.png" />
+    <Content Include="Content\img\user-profile-1.jpg" />
+    <Content Include="Content\img\user-profile-2.jpg" />
+    <Content Include="Content\img\user-profile-3.jpg" />
+    <Content Include="Content\img\user-profile-4.jpg" />
+    <Content Include="Content\img\widget-bg-afternoon.jpg" />
+    <Content Include="Content\img\widget-bg-evening.jpg" />
+    <Content Include="Content\img\widget-bg-midnight.jpg" />
+    <Content Include="Content\img\widget-bg-morning.jpg" />
+    <Content Include="Content\js\demo\advanced-form-demo.js" />
+    <Content Include="Content\js\demo\advanced-tables-demo2.js" />
+    <Content Include="Content\js\demo\advanced-tables-demo.js" />
+    <Content Include="Content\js\demo\buttons-demo.js" />
+    <Content Include="Content\js\demo\calendar-demo.js" />
+    <Content Include="Content\js\demo\dashboard-demo.js" />
+    <Content Include="Content\js\demo\mailbox-demo.js" />
+    <Content Include="Content\js\demo\map-demo-data.js" />
+    <Content Include="Content\js\demo\notifications-demo.js" />
+    <Content Include="Content\js\demo\sliders-demo.js" />
+    <Content Include="Content\js\demo\validation-demo.js" />
+    <Content Include="Content\js\demo\wysiwyg-demo.js" />
+    <Content Include="Content\js\flex.js" />
+    <Content Include="Content\js\html5shiv.js" />
+    <Content Include="Content\js\plugins\bootstrap-datepicker\bootstrap-datepicker.js" />
+    <Content Include="Content\js\plugins\bootstrap-maxlength\bootstrap-maxlength.js" />
+    <Content Include="Content\js\plugins\bootstrap-maxlength\bootstrap-maxlength.min.js" />
+    <Content Include="Content\js\plugins\bootstrap-multiselect\bootstrap-multiselect.js" />
+    <Content Include="Content\js\plugins\bootstrap-timepicker\bootstrap-timepicker.js" />
+    <Content Include="Content\js\plugins\bootstrap-timepicker\bootstrap-timepicker.min.js" />
+    <Content Include="Content\js\plugins\bootstrap-tokenfield\affix.js" />
+    <Content Include="Content\js\plugins\bootstrap-tokenfield\bootstrap-tokenfield.js" />
+    <Content Include="Content\js\plugins\bootstrap-tokenfield\bootstrap-tokenfield.min.js" />
+    <Content Include="Content\js\plugins\bootstrap-tokenfield\scrollspy.js" />
+    <Content Include="Content\js\plugins\bootstrap-tokenfield\typeahead.min.js" />
+    <Content Include="Content\js\plugins\bootstrap\bootstrap.js" />
+    <Content Include="Content\js\plugins\bootstrap\bootstrap.min.js" />
+    <Content Include="Content\js\plugins\datatables\datatables-bs3.js" />
+    <Content Include="Content\js\plugins\datatables\jquery.dataTables.js" />
+    <Content Include="Content\js\plugins\daterangepicker\daterangepicker.js" />
+    <Content Include="Content\js\plugins\daterangepicker\moment.js" />
+    <Content Include="Content\js\plugins\dropzone\dropzone.js" />
+    <Content Include="Content\js\plugins\dropzone\dropzone.min.js" />
+    <Content Include="Content\js\plugins\easypiechart\jquery.easypiechart.js" />
+    <Content Include="Content\js\plugins\easypiechart\jquery.easypiechart.min.js" />
+    <Content Include="Content\js\plugins\flot\flot-demo-data.js" />
+    <Content Include="Content\js\plugins\flot\jquery.flot.js" />
+    <Content Include="Content\js\plugins\flot\jquery.flot.pie.js" />
+    <Content Include="Content\js\plugins\flot\jquery.flot.resize.js" />
+    <Content Include="Content\js\plugins\flot\jquery.flot.stack.js" />
+    <Content Include="Content\js\plugins\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="Content\js\plugins\fullcalendar\fullcalendar.js" />
+    <Content Include="Content\js\plugins\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Content\js\plugins\fullcalendar\jquery-ui.custom.min.js" />
+    <Content Include="Content\js\plugins\hisrc\hisrc.js" />
+    <Content Include="Content\js\plugins\jvectormap\jquery-jvectormap-1.1.1.min.js" />
+    <Content Include="Content\js\plugins\jvectormap\jquery-jvectormap-1.2.2.min.js" />
+    <Content Include="Content\js\plugins\jvectormap\maps\jquery-jvectormap-us-lcc-en.js" />
+    <Content Include="Content\js\plugins\jvectormap\maps\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Content\js\plugins\ladda\ladda.js" />
+    <Content Include="Content\js\plugins\ladda\ladda.min.js" />
+    <Content Include="Content\js\plugins\ladda\spin.js" />
+    <Content Include="Content\js\plugins\ladda\spin.min.js" />
+    <Content Include="Content\js\plugins\messenger\messenger-theme-flat.js" />
+    <Content Include="Content\js\plugins\messenger\messenger.js" />
+    <Content Include="Content\js\plugins\messenger\messenger.min.js" />
+    <Content Include="Content\js\plugins\moment\moment.min.js" />
+    <Content Include="Content\js\plugins\morris\morris-demo-data.js" />
+    <Content Include="Content\js\plugins\morris\morris.js" />
+    <Content Include="Content\js\plugins\morris\raphael-2.1.0.min.js" />
+    <Content Include="Content\js\plugins\pace\pace.js" />
+    <Content Include="Content\js\plugins\popupoverlay\defaults.js" />
+    <Content Include="Content\js\plugins\popupoverlay\jquery.popupoverlay.js" />
+    <Content Include="Content\js\plugins\popupoverlay\logout.js" />
+    <Content Include="Content\js\plugins\slimscroll\jquery.slimscroll.js" />
+    <Content Include="Content\js\plugins\slimscroll\jquery.slimscroll.min.js" />
+    <Content Include="Content\js\plugins\sparkline\jquery.sparkline.js" />
+    <Content Include="Content\js\plugins\sparkline\jquery.sparkline.min.js" />
+    <Content Include="Content\js\plugins\summernote\summernote.js" />
+    <Content Include="Content\js\plugins\summernote\summernote.min.js" />
+    <Content Include="Content\js\plugins\validate\jquery.validate.js" />
+    <Content Include="Content\js\plugins\validate\jquery.validate.min.js" />
+    <Content Include="Content\js\respond.min.js" />
+    <Content Include="Global.asax" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CizgiFilmController.cs" />
+    <Compile Include="Controllers\DiniDiziController.cs" />
+    <Compile Include="Controllers\DiniFilmController.cs" />
+    <Compile Include="Controllers\DiziController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\FilmController.cs" />
+    <Compile Include="Controllers\DiziFilmOyuncularController.cs" />
+    <Compile Include="Controllers\DiziFilmYonetmenlerController.cs" />
+    <Compile Include="Controllers\FilmKategorilerController.cs" />
+    <Compile Include="Controllers\GirisController.cs" />
+    <Compile Include="Controllers\HesabimController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Models\CizgiFilm.cs" />
+    <Compile Include="Models\CizgiFilmBolum.cs" />
+    <Compile Include="Models\DiniDizi.cs" />
+    <Compile Include="Models\DiniDiziBolum.cs" />
+    <Compile Include="Models\DiniFilm.cs" />
+    <Compile Include="Models\Dizi.cs" />
+    <Compile Include="Models\DiziBolum.cs" />
+    <Compile Include="Service\ResimAyarlama.cs" />
+    <Compile Include="Service\Sorgular.cs" />
+    <Compile Include="Controllers\YoneticilerController.cs" />
+    <Compile Include="Models\Film.cs" />
+    <Compile Include="Models\Kategoriler.cs" />
+    <Compile Include="Models\Oyuncular.cs" />
+    <Compile Include="Models\Yoneticiler.cs" />
+    <Compile Include="Models\Yonetmenler.cs" />
+    <Compile Include="Service\Tools.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\css\plugins\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\css\plugins\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\css\plugins\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\icons\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\icons\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\icons\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\icons\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\icons\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Content\icons\font-awesome\less\core.less" />
+    <Content Include="Content\icons\font-awesome\less\fixed-width.less" />
+    <Content Include="Content\icons\font-awesome\less\font-awesome.less" />
+    <Content Include="Content\icons\font-awesome\less\icons.less" />
+    <Content Include="Content\icons\font-awesome\less\larger.less" />
+    <Content Include="Content\icons\font-awesome\less\list.less" />
+    <Content Include="Content\icons\font-awesome\less\mixins.less" />
+    <Content Include="Content\icons\font-awesome\less\path.less" />
+    <Content Include="Content\icons\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Content\icons\font-awesome\less\spinning.less" />
+    <Content Include="Content\icons\font-awesome\less\stacked.less" />
+    <Content Include="Content\icons\font-awesome\less\variables.less" />
+    <Content Include="Content\icons\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Content\icons\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Content\icons\font-awesome\scss\_core.scss" />
+    <Content Include="Content\icons\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Content\icons\font-awesome\scss\_icons.scss" />
+    <Content Include="Content\icons\font-awesome\scss\_larger.scss" />
+    <Content Include="Content\icons\font-awesome\scss\_list.scss" />
+    <Content Include="Content\icons\font-awesome\scss\_mixins.scss" />
+    <Content Include="Content\icons\font-awesome\scss\_path.scss" />
+    <Content Include="Content\icons\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Content\icons\font-awesome\scss\_spinning.scss" />
+    <Content Include="Content\icons\font-awesome\scss\_stacked.scss" />
+    <Content Include="Content\icons\font-awesome\scss\_variables.scss" />
+    <None Include="packages.config" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_NavTop.cshtml" />
+    <Content Include="Views\Shared\_NavSide.cshtml" />
+    <Content Include="Views\Giris\Index.cshtml" />
+    <Content Include="Views\Film\Index.cshtml" />
+    <Content Include="Views\Film\KayitFormu.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_GelismisTablo.cshtml" />
+    <Content Include="Views\DiziFilmOyuncular\Index.cshtml" />
+    <Content Include="Views\Film\Listeleme.cshtml" />
+    <Content Include="Views\DiziFilmOyuncular\Ekle.cshtml" />
+    <Content Include="Views\DiziFilmYonetmenler\Index.cshtml" />
+    <Content Include="Views\DiziFilmYonetmenler\Ekle.cshtml" />
+    <Content Include="Views\Yoneticiler\Index.cshtml" />
+    <Content Include="Views\Yoneticiler\Ekle.cshtml" />
+    <Content Include="Views\Hesabim\Index.cshtml" />
+    <Content Include="Views\Hesabim\Ekle.cshtml" />
+    <Content Include="Views\Dizi\Index.cshtml" />
+    <Content Include="Views\FilmKategoriler\Index.cshtml" />
+    <Content Include="Views\FilmKategoriler\Ekle.cshtml" />
+    <Content Include="Views\Dizi\DiziForm.cshtml" />
+    <Content Include="Views\Dizi\Listeleme.cshtml" />
+    <Content Include="Views\Dizi\Bolumler.cshtml" />
+    <Content Include="Views\Dizi\BolumForm.cshtml" />
+    <Content Include="Views\Error\PageError.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Film\ImageUpload.cshtml" />
+    <Content Include="Views\Film\FilmResim.cshtml" />
+    <Content Include="Views\Dizi\DiziResim.cshtml" />
+    <Content Include="Views\CizgiFilm\Index.cshtml" />
+    <Content Include="Views\CizgiFilm\Listeleme.cshtml" />
+    <Content Include="Views\CizgiFilm\CizgiFilmForm.cshtml" />
+    <Content Include="Views\CizgiFilm\BolumForm.cshtml" />
+    <Content Include="Views\CizgiFilm\Bolumler.cshtml" />
+    <Content Include="Views\CizgiFilm\CizgiFilmResim.cshtml" />
+    <Content Include="Views\DiniFilm\Listeleme.cshtml" />
+    <Content Include="Views\DiniFilm\Index.cshtml" />
+    <Content Include="Views\DiniFilm\KayitFormu.cshtml" />
+    <Content Include="Views\DiniDizi\Index.cshtml" />
+    <Content Include="Views\DiniDizi\Listeleme.cshtml" />
+    <Content Include="Views\DiniDizi\DiziForm.cshtml" />
+    <Content Include="Views\DiniDizi\BolumForm.cshtml" />
+    <Content Include="Views\DiniDizi\Bolumler.cshtml" />
+    <Content Include="Views\Home\Navside.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Images\" />
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52722</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5272/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

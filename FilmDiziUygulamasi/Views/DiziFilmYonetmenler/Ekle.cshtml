@@ -1,0 +1,30 @@
+﻿@model FilmDiziUygulamasi.Models.Yonetmenler
+@using FilmDiziUygulamasi.Models;
+@{
+    ViewBag.Title = "Yönetmen";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    bool islem = ViewBag.islem;
+}
+
+<br /><br />
+@using (Html.BeginForm("Kaydet", "DiziFilmYonetmenler", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => Model.YonetmenID)
+        @Html.TextBoxFor(m => Model.YonetmenID, new { @class = "form-control", @readonly = true })
+
+
+        @Html.LabelFor(m => Model.YonetmenAdSoyad)
+        @Html.TextBoxFor(m => Model.YonetmenAdSoyad, new { @class = "form-control", required = "required" })
+    </div>
+    <button type="submit" class="btn btn-success">Kaydet</button>
+}
+
+@section scripts {
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    @if (islem)
+    {
+        <script>function İslem() { swal('İşlem Başarılı!', '', 'success'); }; İslem();</script>
+    }
+
+}

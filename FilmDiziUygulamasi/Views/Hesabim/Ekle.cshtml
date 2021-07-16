@@ -1,0 +1,32 @@
+﻿@model FilmDiziUygulamasi.Models.Yoneticiler
+@using FilmDiziUygulamasi.Models;
+@{
+    ViewBag.Title = "Hesaabımı Güncelle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    bool islem = ViewBag.islem;
+}
+
+<br /><br />
+@using (Html.BeginForm("Kaydet", "Hesabim", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.YoneticiID)
+        @Html.TextBoxFor(m => m.YoneticiID, new { @class = "form-control", @readonly = true })
+
+        @Html.LabelFor(m => m.YoneticiAdi)
+        @Html.TextBoxFor(m => m.YoneticiAdi, new { @class = "form-control", required = "required" })
+
+        @Html.LabelFor(m => m.YoneticiParola)
+        @Html.TextBoxFor(m => m.YoneticiParola, new { @class = "form-control", required = "required" })
+    </div>
+    <button type="submit" class="btn btn-success" onclick="swal('İşlem Başarılı!', '', 'success');">Kaydet</button>
+}
+
+@section scripts {
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    @if (islem)
+    {
+        <script>function İslem() { swal('İşlem Başarılı!', '', 'success'); }; İslem();</script>
+    }
+
+}

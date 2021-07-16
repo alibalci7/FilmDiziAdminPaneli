@@ -1,0 +1,34 @@
+﻿@using FilmDiziUygulamasi.Models;
+@{
+    ViewBag.Title = "Ana Sayfa";
+    Layout = "~/Views/Shared/_GelismisTablo.cshtml";
+
+    List<Film> filmler = ViewBag.filmlerim;
+    List<Film> top10filmler = ViewBag.top10filmler;
+    List<Film> toplikefilmler = ViewBag.toplikefilmler;
+    List<Film> sonfilmler = ViewBag.sonfilmler;
+
+    List<Dizi> diziler = ViewBag.dizilerim;
+    List<Dizi> top10diziler = ViewBag.top10diziler;
+    List<Dizi> toplikediziler = ViewBag.toplikediziler;
+    List<Dizi> sondiziler = ViewBag.sondiziler;
+
+    bool islem = ViewBag.islem;
+}
+
+<style>
+    .metin{
+        font-size:36px;
+        font-family:Verdana;
+        text-decoration:underline;
+        font-style:italic;
+    }
+</style>
+
+<div class="page-content">
+
+    <br /><br /><br /><br />
+    <center><p class="metin"> Zen Uygulamaya Hoşgeldiniz! </p></center>
+
+</div>
+<!-- /.page-content -->

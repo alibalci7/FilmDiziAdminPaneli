@@ -1,0 +1,35 @@
+﻿@using FilmDiziUygulamasi.Models;
+@{
+    ViewBag.Title = "Yönetici Ekle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Yoneticiler y = new Yoneticiler();
+    bool islem = ViewBag.islem;
+}
+
+<br /><br />
+@using (Html.BeginForm("Kaydet", "Yoneticiler", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => y.YoneticiAdi)
+        @Html.TextBoxFor(m => y.YoneticiAdi, new { @class = "form-control", required = "required" })
+        @Html.LabelFor(m => y.YoneticiParola)
+        @Html.TextBoxFor(m => y.YoneticiParola, new { @class = "form-control", required = "required" })
+        @Html.LabelFor(m => y.YoneticiTip)
+        <br />
+        Yönetici @Html.RadioButtonFor(m => y.YoneticiTip, 1, new { @class = "form-control", required = "required" })
+        Fim/Dizi @Html.RadioButtonFor(m => y.YoneticiTip, 2, new { @class = "form-control", required = "required" })
+        çizgi Film @Html.RadioButtonFor(m => y.YoneticiTip, 3, new { @class = "form-control", required = "required" })
+        Dini @Html.RadioButtonFor(m => y.YoneticiTip, 4, new { @class = "form-control", required = "required" })
+        <br />
+    </div>
+    <button type="submit" class="btn btn-success">Kaydet</button>
+}
+
+@section scripts {
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    @if (islem)
+    {
+        <script>function İslem() { swal('İşlem Başarılı!', '', 'success'); }; İslem();</script>
+    }
+
+}

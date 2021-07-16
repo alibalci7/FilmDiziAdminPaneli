@@ -1,0 +1,46 @@
+﻿@model FilmDiziUygulamasi.Models.CizgiFilm
+@using FilmDiziUygulamasi.Models;
+@{
+    ViewBag.Title = "Cizgi Film Form";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    bool islem = ViewBag.islem;
+}
+
+<br /> <br /> <br />
+
+<form action="/CizgiFilm/CizgiFilmKaydet" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        @Html.Label("Çizgi Film ID")
+        @Html.TextBoxFor(m => m.CizgiFilmID, new { @class = "form-control", @readonly = true })
+        <br />
+        @Html.Label("Çizgi Film Başlık")
+        @Html.TextBoxFor(m => m.CizgiFilmBaslik, new { @class = "form-control", required = "required" })
+        <br />
+        @Html.Label("Çizgi Film Kapak Fotoğrafı")
+        @if (Model == null)
+        {
+            <input type="file" name="uploadfile" id="uploadfile" required />
+        }
+        else
+        {
+            <input type="file" name="uploadfile" id="uploadfile" />
+        }
+
+        <br /> <br />
+        <input type="submit" class="btn btn-green btn-lg" value="Kaydet">
+    </div>
+
+</form>
+
+@section scripts {
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    @if (islem)
+    {
+        <script>function İslem() { swal('İşlem Başarılı!', '', 'success'); }; İslem();</script>
+    }
+
+}
+
+
+
+

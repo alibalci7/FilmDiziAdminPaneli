@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title> @ViewBag.Title</title>
+
+    <!-- PACE LOAD BAR PLUGIN - This creates the subtle load bar effect at the top of the page. -->
+    <link href="~/Content/css/plugins/pace/pace.css" rel="stylesheet">
+    <script src="~/Content/js/plugins/pace/pace.js"></script>
+
+    <!-- GLOBAL STYLES - Include these on every page. -->
+    <link href="~/Content/css/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic' rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel="stylesheet" type="text/css">
+    <link href="~/Content/icons/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- PAGE LEVEL PLUGIN STYLES -->
+    <link href="~/Content/css/plugins/messenger/messenger.css" rel="stylesheet">
+    <link href="~/Content/css/plugins/messenger/messenger-theme-flat.css" rel="stylesheet">
+    <link href="~/Content/css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
+    <link href="~/Content/css/plugins/morris/morris.css" rel="stylesheet">
+    <link href="~/Content/css/plugins/jvectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet">
+    <link href="~/Content/css/plugins/datatables/datatables.css" rel="stylesheet">
+
+    <!-- THEME STYLES - Include these on every page. -->
+    <link href="~/Content/css/style.css" rel="stylesheet">
+    <link href="~/Content/css/plugins.css" rel="stylesheet">
+
+    <!-- THEME DEMO STYLES - Use these styles for reference if needed. Otherwise they can be deleted. -->
+    <link href="~/Content/css/demo.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- begin TOP NAVIGATION -->
+        <!-- end TOP NAVIGATION -->
+        <!-- begin SIDE NAVIGATION -->
+        @Html.Action("NavSide","Home")
+        <!-- end SIDE NAVIGATION -->
+        <!-- begin MAIN PAGE CONTENT -->
+        <div id="page-wrapper">
+            @RenderBody()
+        </div>
+        <!-- /#page-wrapper -->
+        <!-- end MAIN PAGE CONTENT -->
+
+
+    </div>
+    <!-- /#wrapper -->
+    <!-- GLOBAL SCRIPTS -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="~/Content/js/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="~/Content/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="~/Content/js/plugins/popupoverlay/jquery.popupoverlay.js"></script>
+    <script src="~/Content/js/plugins/popupoverlay/defaults.js"></script>
+
+    <!-- Logout Notification Box -->
+    <div id="logout">
+        <div class="logout-message">
+            <img class="img-circle img-logout" src="~/Content/img/profil.jpg" alt="" width="150" height="150">
+            <h3>
+                <i class="fa fa-sign-out text-green"></i> Çıkmak istiyor musun?
+            </h3>
+            <p>Çıkış yapmak için <br> çık butonuna basınız.</p>
+            <ul class="list-inline">
+                <li>
+                    <a href="/Giris/Cikis" class="btn btn-green">
+                        <strong>Çık</strong>
+                    </a>
+                </li>
+                <li>
+                    <button class="logout_close btn btn-green">İptal</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /#logout -->
+    <!-- Logout Notification jQuery -->
+    <script src="~/Content/js/plugins/popupoverlay/logout.js"></script>
+    <!-- HISRC Retina Images -->
+    <script src="~/Content/js/plugins/hisrc/hisrc.js"></script>
+
+    <!-- PAGE LEVEL PLUGIN SCRIPTS -->
+    <!-- HubSpot Messenger -->
+    <script src="~/Content/js/plugins/messenger/messenger.min.js"></script>
+    <script src="~/Content/js/plugins/messenger/messenger-theme-flat.js"></script>
+    <!-- Date Range Picker -->
+    <script src="~/Content/js/plugins/daterangepicker/moment.js"></script>
+    <script src="~/Content/js/plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Morris Charts -->
+    <script src="~/Content/js/plugins/morris/raphael-2.1.0.min.js"></script>
+    <script src="~/Content/js/plugins/morris/morris.js"></script>
+    <!-- Flot Charts -->
+    <script src="~/Content/js/plugins/flot/jquery.flot.js"></script>
+    <script src="~/Content/js/plugins/flot/jquery.flot.resize.js"></script>
+    <!-- Sparkline Charts -->
+    <script src="~/Content/js/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <!-- Moment.js -->
+    <script src="~/Content/js/plugins/moment/moment.min.js"></script>
+    <!-- jQuery Vector Map -->
+    <script src="~/Content/js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="~/Content/js/plugins/jvectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="~/Content/js/demo/map-demo-data.js"></script>
+    <!-- Easy Pie Chart -->
+    <script src="~/Content/js/plugins/easypiechart/jquery.easypiechart.min.js"></script>
+    <!-- DataTables -->
+    @RenderSection("scripts", false);
+
+    <!-- THEME SCRIPTS -->
+    <script src="~/Content/js/flex.js"></script>
+    <script src="~/Content/js/demo/dashboard-demo.js"></script>
+
+</body>
+
+</html>

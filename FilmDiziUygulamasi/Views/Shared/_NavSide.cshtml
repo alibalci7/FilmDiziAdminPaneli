@@ -1,0 +1,155 @@
+﻿@{
+//string yoneticiAd = TempData["yoneticiad"].ToString();
+}
+<nav class="navbar-side" role="navigation">
+    <div class="navbar-collapse sidebar-collapse collapse">
+        <ul id="side" class="nav navbar-nav side-nav">
+            <!-- begin SIDE NAV USER PANEL -->
+            <li class="side-user hidden-xs">
+                <img class="img-circle" src="~/Content/img/profil.jpg" alt="" width="150" height="150">
+                <p class="welcome">
+                    <i class="fa fa-key"></i> Aktif Kullanıcı
+                </p>
+                <p class="name tooltip-sidebar-logout">
+                    <span class="last-name">@*@yoneticiAd*@</span> <a style="color: inherit" class="logout_open" href="/Giris" data-toggle="tooltip" data-placement="top" title="Çıkış"><i class="fa fa-sign-out"></i></a>
+                </p>
+                <div class="clearfix"></div>
+            </li>
+            <!-- end SIDE NAV USER PANEL -->
+            <!-- begin SIDE NAV SEARCH -->
+            <!--
+     <li class="nav-search">
+        <form role="form">
+            <input type="search" class="form-control" placeholder="Ara...">
+            <button class="btn">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </li>
+        -->
+            <!-- begin Ana Sayfa LINK -->
+            <li>
+                <a class="active" href="/Home/Index">
+                    Ana Sayfa
+                </a>
+            </li>
+            <!-- end ana Sayfa LINK -->
+            <!-- end SIDE NAV SEARCH -->
+            <!-- begin Hesabım LINK -->
+            <li>
+                <a href="/Hesabim">
+                    Hesabım
+                </a>
+            </li>
+            <!-- end Hesabım LINK -->
+            <!-- begin Dizi/Film Uygulaması DROPDOWN -->
+            <li class="panel">
+                <a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#dizifilm">
+                    Dizi/Film Uygulaması <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="collapse nav" id="dizifilm">
+                    <li>
+                        <a href="/Film">
+                            Film İşlemleri
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Dizi">
+                            Dizi İşlemleri
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/FilmKategoriler">
+                            Kategori İşlemleri
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <!-- end Dizi/Film Uygulaması DROPDOWN -->
+            <!-- begin Oyuncu/Yonetmen Uygulaması DROPDOWN -->
+            <li class="panel">
+                <a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#oyuncuYonetmen">
+                    Oyuncu/Yönetmen İşlemleri <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="collapse nav" id="oyuncuYonetmen">
+                    <li>
+                        <a href="/DiziFilmOyuncular">
+                            Oyuncu İşlemleri
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/DiziFilmYonetmenler">
+                            Yönetmen İşlemleri
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <!-- end Oyuncu/Yonetmen  Uygulaması DROPDOWN -->
+            <!-- begin Çizgi Film Uygulaması DROPDOWN -->
+            <li class="panel">
+                <a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#cizgifilm">
+                    </i> Çizgi Film Uygulaması <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="collapse nav" id="cizgifilm">
+                    <li>
+                        <a href="/CizgiFilm">
+                            Çizgi Film İşlemleri
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <!-- end Çizgi Film Uygulaması DROPDOWN -->
+            <!-- begin Dini Dizi/Film Uygulaması DROPDOWN -->
+            <li class="panel">
+                <a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#dini">
+                    Dini Dizi/Film Uygulaması <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="collapse nav" id="dini">
+                    <li>
+                        <a href="/DiniFilm">
+                            Film İşlemleri
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/DiniDizi">
+                            Dizi İşlemleri
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <!-- end Dizi/Film Uygulaması DROPDOWN -->
+            <!-- begin Eğitim Uygulaması DROPDOWN -->
+            <li class="panel">
+                <a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#egitim">
+                    Eğitim Uygulaması <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="collapse nav" id="egitim">
+                    <li>
+                        <a href="basic-tables.html">
+                            Eğitim Dersleri İşlemleri
+                        </a>
+                    </li>
+                    <li>
+                        <a href="advanced-tables.html">
+                            Kategori İşlemleri
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <!-- end Eğitim Uygulaması DROPDOWN -->
+            <!-- begin Kullanıcılar LINK -->
+            <li>
+                <a href="/Yoneticiler">
+                    Yöneticiler
+                </a>
+            </li>
+            <!-- end Kullanıcılar LINK -->
+        </ul>
+        <!-- /.side-nav -->
+    </div>
+    <!-- /.navbar-collapse -->
+</nav>
+<!-- /.navbar-side -->
+@{
+//TempData["yoneticiad"] = yoneticiAd;
+}

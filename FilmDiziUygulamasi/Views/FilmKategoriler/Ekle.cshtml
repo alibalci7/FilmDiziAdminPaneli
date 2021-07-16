@@ -1,0 +1,37 @@
+﻿@model FilmDiziUygulamasi.Models.Kategoriler
+@using FilmDiziUygulamasi.Models;
+@{
+    ViewBag.Title = "Kategori";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Kategoriler k = ViewBag.kategori;
+    bool islem = ViewBag.islem;
+}
+
+<br /><br />
+@using (Html.BeginForm("Kaydet", "FilmKategoriler", FormMethod.Post))
+{
+    <div class="form-group">
+
+        @Html.Label("Kategori ID")
+        @Html.TextBoxFor(m => Model.KategoriID, new { @class = "form-control", @readonly = true })
+        <br />
+        @Html.Label("Üst Kategori")
+        <br />
+        Yerli Filmler @Html.RadioButtonFor(m => Model.KategoriUstID, 1, new { @class = "form-control", required = "required" })
+        <br />
+        Yabancı Filmler @Html.RadioButtonFor(m => Model.KategoriUstID, 2, new { @class = "form-control", required = "required" })
+        <br />
+        @Html.Label("Kategori Adı")
+        @Html.TextBoxFor(m => Model.KategoriAd, new { @class = "form-control", required = "required" })
+    </div>
+    <button type="submit" class="btn btn-success">Kaydet</button>
+}
+
+@section scripts {
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    @if (islem)
+    {
+        <script>function İslem() { swal('İşlem Başarılı!', '', 'success'); }; İslem();</script>
+    }
+
+}
